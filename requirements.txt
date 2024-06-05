@@ -1,0 +1,11 @@
+pandas
+numpy
+streamlit
+streamlit-option-menu
+Pillow
+requests
+geopy
+jsonlib-python3
+statistics
+pickle5
+scikit-learn

@@ -188,7 +188,7 @@ elif selected_page == "Prediction Zone":
                         town = st.selectbox("Select Town", df1['town'].unique())
                         flat_type = st.selectbox("Choose Flat Type", df1['flat_type'].unique())
                         block = st.selectbox("Choose Block", df1['block'].unique())
-                        street_name = st.selectbox("Choose Street name", df['street_name'].unique())
+                        street_name = st.selectbox("Choose Street name", df1['street_name'].unique())
                         storey_min = st.number_input("Enter Storey min", min_value=1, max_value=49, value=1)
                         storey_max = st.number_input("Enter Storey max", min_value=1, max_value=51, value=1)
                         
@@ -196,7 +196,7 @@ elif selected_page == "Prediction Zone":
                     with col2:
                         floor_area = st.slider("Select floor sq. m", min_value=29, max_value=306, value=1)
                         floor_area_sqm = np.log(floor_area)
-                        flat_model = st.selectbox("Choose Flat Model", df['flat_model'].unique())
+                        flat_model = st.selectbox("Choose Flat Model", df1['flat_model'].unique())
                         lease_commence_date = st.number_input("Select Lease Commence Year which you want", min_value=1967, max_value=3000, value=2024)
                         end_of_lease = st.number_input("Select Lease End year which you want", min_value=2065, max_value=3000)
                         transaction_year = st.number_input("Select transaction Year which you want", min_value=1990, max_value=3000, value=2024)

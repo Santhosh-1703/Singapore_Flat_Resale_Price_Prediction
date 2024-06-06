@@ -163,7 +163,7 @@ elif selected_page == "Prediction Zone":
                             # Encode categorical features
                             town_encoded = encoders['town'].transform([town])[0]
                             flat_type_encoded = encoders['flat_type'].transform([flat_type])[0]
-                            block_encoded = encoders['block'].transform([block])[0]
+                            block_encoded = encoders['blk_no'].transform([block])[0]
                             street_name_encoded = encoders['street_name'].transform([street_name])[0]
                             flat_model_encoded = encoders['flat_model'].transform([flat_model])[0]
 

@@ -55,7 +55,7 @@ elif selected_page == "Home":
     tab1,tab2 = st.tabs(["Singapore Flats Resale Price Prediction","  Applications and Libraries Used! "])
     with tab1:
         st.write(" Singapore Flats Resale Price using a Machine Learning helps users gather valuable insights about Total Performing area, and Property details. By combining this data with information from social media, users can get a comprehensive view of their online presence and audience engagement. This approach enables data-driven decision-making and more effective content strategies.")
-        st.write("[:open_book: Click here to know current Copper Price  >](https://markets.businessinsider.com/commodities/copper-price)")
+        st.write("[:open_book: Click here to know Singapore Flats Resale Price >](https://beta.data.gov.sg/collections/189/view)")
         if st.button("Click here to know about this Model"):
             col1, col2 = st.columns(2)
             with col1:

@@ -2,11 +2,6 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from streamlit_option_menu import option_menu
-from PIL import Image
-import requests
-from geopy.distance import geodesic
-import json
-import statistics
 import pickle
 import datetime as dt
 from sklearn.model_selection import train_test_split

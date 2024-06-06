@@ -145,7 +145,7 @@ elif selected_page == "Prediction Zone":
                 st.write('## :green[Predicted Resale Price: 💲] ', np.exp(new_pred))
     
     with tab1:
-            data = pd.read_csv(r"SFR_Final_Processed.csv")
+            data = pd.read_csv(r"SFR_Final_Filtered.csv")
             df1 = pd.DataFrame(data)
             with st.form("form2"):
                     col1,col2=st.columns(2)
@@ -187,7 +187,7 @@ elif selected_page == "Prediction Zone":
                         transaction_month = st.slider("Select Item Month", min_value=1, max_value=12, value=1)
                         town = st.selectbox("Select Town", df1['town'].unique())
                         flat_type = st.selectbox("Choose Flat Type", df1['flat_type'].unique())
-                        block = st.selectbox("Choose Block", df['block'].unique())
+                        block = st.selectbox("Choose Block", df1['block'].unique())
                         street_name = st.selectbox("Choose Street name", df['street_name'].unique())
                         storey_min = st.number_input("Enter Storey min", min_value=1, max_value=49, value=1)
                         storey_max = st.number_input("Enter Storey max", min_value=1, max_value=51, value=1)

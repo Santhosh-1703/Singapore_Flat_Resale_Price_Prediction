@@ -145,7 +145,7 @@ elif selected_page == "Prediction Zone":
                 st.write('## :green[Predicted Resale Price: 💲] ', np.exp(new_pred))
     
     with tab1:
-            data = pd.read_csv(r"SFR_Final_Filtered.csv")
+            data = pd.read_csv(r"SRF_Final_Filtered.csv")
             df1 = pd.DataFrame(data)
             with st.form("form2"):
                     col1,col2=st.columns(2)

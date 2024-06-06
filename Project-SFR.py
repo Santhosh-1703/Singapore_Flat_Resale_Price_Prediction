@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
 
 # Set the page configuration with the Airbnb icon
-st.set_page_config(page_title='Singapore Resale Flat Price Prediction', page_icon="C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale\sfr.jpg", layout="wide")
+st.set_page_config(page_title='Singapore Resale Flat Price Prediction', page_icon="sfr.jpg", layout="wide")
 
 # Front Page Design
 st.markdown("<h1 style='text-align: center; font-weight: bold; font-family: Comic Sans MS;'>Singapore Resale Flat Price Prediction</h1>", unsafe_allow_html=True)
@@ -83,7 +83,7 @@ elif selected_page == "Home":
 elif selected_page == "Prediction Zone":
     tab1, tab2 = st.tabs(["Predict Selling Price by Flat type","Predict Selling Price by Distance "])
     with tab2:
-            data = pd.read_csv(r"C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale/Final_Singapore_flat_resale_price_file.csv")
+            data = pd.read_csv(r"Singapore_flat_resale_price_file.csv")
             df = pd.DataFrame(data)
             # Define the form
             with st.form("form1"):
@@ -135,9 +135,9 @@ elif selected_page == "Prediction Zone":
                 }
 
             new_sample = np.array([[cbd_dist, min_dist_mrt, np.log(floor_area_sqm), lease_remain_years, np.log(storey_median)]])
-            with open(r"C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale/scaler.pkl", 'rb') as f:
+            with open(r"scaler.pkl", 'rb') as f:
                     scaler_loaded = pickle.load(f)
-            with open(r"C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale/modelxgb.pkl", 'rb') as file:
+            with open(r"modelxgb.pkl", 'rb') as file:
                     loaded_model = pickle.load(file)
             new_sample = scaler_loaded.transform(new_sample[:, :5])
             new_pred =   loaded_model.predict(new_sample)[0]

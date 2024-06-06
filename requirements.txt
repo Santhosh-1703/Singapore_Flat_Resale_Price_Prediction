@@ -2,10 +2,5 @@ pandas
 numpy
 streamlit
 streamlit-option-menu
-Pillow
-requests
-geopy
-jsonlib-python3
-statistics
-pickle5
+pickle
 scikit-learn==1.2.2

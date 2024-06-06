@@ -151,11 +151,11 @@ elif selected_page == "Prediction Zone":
                     col1,col2=st.columns(2)
                     with col1:
                         # Load the pickled encoders
-                        with open(r"C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale/categorical_encoders.pickle", 'rb') as f:
+                        with open(r"categorical_encoders.pickle", 'rb') as f:
                             encoders = pickle.load(f)
 
                         # Load the pickled model
-                        with open(r"C:/Users/SANTHOSH RAJENDRAN/Desktop/GUVI Python/Project-Singaporeflatresale/modelxgbsfr.pkl", 'rb') as file:
+                        with open(r"modelxgbsfr.pkl", 'rb') as file:
                             model = pickle.load(file)
 
                         # Define a function to preprocess input features

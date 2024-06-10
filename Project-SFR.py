@@ -134,15 +134,15 @@ elif selected_page == "Prediction Zone":
                     'storey_median': storey_median
                 }
 
-            new_sample = np.array([[cbd_dist, min_dist_mrt, np.log(floor_area_sqm), lease_remain_years, np.log(storey_median)]])
-            with open(r"scaler.pkl", 'rb') as f:
-                    scaler_loaded = pickle.load(f)
-            with open(r"modelxgb.pkl", 'rb') as file:
-                    loaded_model = pickle.load(file)
-            new_sample = scaler_loaded.transform(new_sample[:, :5])
-            new_pred =   loaded_model.predict(new_sample)[0]
-            with col2:
-                st.write('## :green[Predicted Resale Price: 💲] ', np.exp(new_pred))
+                new_sample = np.array([[cbd_dist, min_dist_mrt, np.log(floor_area_sqm), lease_remain_years, np.log(storey_median)]])
+                with open(r"scaler.pkl", 'rb') as f:
+                        scaler_loaded = pickle.load(f)
+                with open(r"modelxgb.pkl", 'rb') as file:
+                        loaded_model = pickle.load(file)
+                new_sample = scaler_loaded.transform(new_sample[:, :5])
+                new_pred =   loaded_model.predict(new_sample)[0]
+                with col2:
+                    st.write('## :green[Predicted Resale Price: 💲] ', np.exp(new_pred))
     
     with tab1:
             data = pd.read_csv(r"SRF_Final_Filtered.csv")
